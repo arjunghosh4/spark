@@ -1,0 +1,14 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: k-spark-
+build:
+  artifacts:
+  - image: myk8spark
+    context: .
+    docker: {}
+manifests:
+  rawYaml:
+  - resources/abnb.yaml
+  - resources/jupyter.yaml
+  - resources/spark_hello.yaml
